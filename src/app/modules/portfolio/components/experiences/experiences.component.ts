@@ -1,5 +1,5 @@
 import { Component, signal } from '@angular/core';
-import { Experiences } from '../../interfaces/experiences.interface';
+import { Experience } from '../../interfaces/experiences.interface';
 
 @Component({
     selector: 'app-experiences',
@@ -8,7 +8,7 @@ import { Experiences } from '../../interfaces/experiences.interface';
     styleUrl: './experiences.component.scss',
 })
 export class ExperiencesComponent {
-    public getExperiences = signal<Experiences[]>([
+    public getExperiences = signal<Experience[]>([
         {
             summary: {
                 strong: 'Front-end Especialista',
