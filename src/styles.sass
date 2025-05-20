@@ -1,1 +1,26 @@
-/* You can add global styles to this file, and also import other style files */
+@use 'scss/variables' as *
+
+body
+  font-family: 'Poppins', sans-serif
+  background-color: var(--bg-color)
+  color: var(--text-color)
+  transition: all 0.3s ease
+  line-height: 1.8
+
+a
+  color: var(--primary-color)
+  text-decoration: none
+  transition: color 0.3s ease
+
+  &:hover
+    color: var(--accent-color)
+
+h1, h2, h3, h4, h5, h6
+  font-weight: 700
+  color: var(--text-color)
+
+.container
+  padding-right: 15px
+  padding-left: 15px
+  margin-right: auto
+  margin-left: auto
