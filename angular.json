@@ -14,13 +14,13 @@
       "sourceRoot": "src",
       "prefix": "app",
       "i18n": {
-        "sourceLocale": "en",
+        "sourceLocale": "pt",
         "locales": {
           "es": {
             "translation": "src/locale/messages.es.xlf"
           },
-          "pt-BR": {
-            "translation": "src/locale/messages.pt-BR.xlf"
+          "en": {
+            "translation": "src/locale/messages.en.xlf"
           }
         }
       },
@@ -28,13 +28,11 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
+            "localize": true,
             "outputPath": "dist/portfolio",
             "index": "src/index.html",
             "browser": "src/main.ts",
-            "polyfills": [
-              "zone.js",
-              "@angular/localize/init"
-            ],
+            "polyfills": ["zone.js", "@angular/localize/init"],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "sass",
             "assets": [
@@ -43,9 +41,7 @@
                 "input": "public"
               }
             ],
-            "styles": [
-              "src/styles.sass"
-            ],
+            "styles": ["src/styles.sass"],
             "scripts": [],
             "server": "src/main.server.ts",
             "outputMode": "server",
@@ -73,6 +69,12 @@
               "optimization": false,
               "extractLicenses": false,
               "sourceMap": true
+            },
+            "en": {
+              "localize": ["en"]
+            },
+            "es": {
+              "localize": ["es"]
             }
           },
           "defaultConfiguration": "production"
@@ -85,6 +87,12 @@
             },
             "development": {
               "buildTarget": "portfolio:build:development"
+            },
+            "en": {
+              "buildTarget": "portfolio:build:en"
+            },
+            "es": {
+              "buildTarget": "portfolio:build:es"
             }
           },
           "defaultConfiguration": "development"
@@ -108,9 +116,7 @@
                 "input": "public"
               }
             ],
-            "styles": [
-              "src/styles.sass"
-            ],
+            "styles": ["src/styles.sass"],
             "scripts": []
           }
         }
