@@ -145,6 +145,36 @@
     }
   }
 
+  .code-toggle {
+    background: var(--bg-secondary);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+
+    .icon {
+      width: 20px;
+      height: 20px;
+      color: var(--text-primary);
+      transition: transform 0.3s ease;
+    }
+
+    &:hover {
+      background: var(--accent-color);
+      transform: scale(1.1);
+
+      .icon {
+        color: #000;
+      }
+    }
+  }
+
   .menu-toggle {
     display: none;
     flex-direction: column;
