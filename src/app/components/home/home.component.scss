@@ -59,15 +59,15 @@
           width: fit-content;
           max-width: fit-content;
           animation: typing 3s steps(14, end) 0.5s 1 normal both;
-          padding-right: 1ch;
+          padding-right: 0.75ch;
 
           &::before {
             content: '';
             position: absolute;
             right: 0;
-            top: 5%;
-            width: 0.6em;
-            height: 90%;
+            bottom: 10px;
+            width: 0.5em;
+            height: calc(100% / 8);
             background: var(--accent-color);
             animation: blink-caret 0.75s step-end infinite;
           }
