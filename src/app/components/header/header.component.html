@@ -2,7 +2,7 @@
   <div class="container">
     <div class="header-content">
       <a routerLink="/" class="logo">
-        <span class="logo-text">Portfolio</span>
+        <span class="logo-text">&lt;valentim/&gt;</span>
       </a>
 
       <nav class="nav" [class.active]="menuOpen">
@@ -23,24 +23,24 @@
       <div class="header-actions">
         <!-- Language Selector -->
         <div class="language-selector">
-          <button 
-            class="lang-btn" 
+          <button
+            class="lang-btn"
             [class.active]="translationService.currentLang() === 'pt'"
             (click)="changeLanguage('pt')"
             title="Português"
             aria-label="Português">
             🇧🇷
           </button>
-          <button 
-            class="lang-btn" 
+          <button
+            class="lang-btn"
             [class.active]="translationService.currentLang() === 'en'"
             (click)="changeLanguage('en')"
             title="English"
             aria-label="English">
             🇺🇸
           </button>
-          <button 
-            class="lang-btn" 
+          <button
+            class="lang-btn"
             [class.active]="translationService.currentLang() === 'es'"
             (click)="changeLanguage('es')"
             title="Español"
