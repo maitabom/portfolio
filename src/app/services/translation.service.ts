@@ -25,7 +25,24 @@ export class TranslationService {
     const savedLang = localStorage.getItem(this.LANG_KEY) as Language;
     if (savedLang && ['pt', 'en', 'es'].includes(savedLang)) {
       this.currentLang.set(savedLang);
+    } else {
+      // Detecta o idioma do navegador
+      const browserLang = this.getBrowserLanguage();
+      this.currentLang.set(browserLang);
     }
+  }
+
+  private getBrowserLanguage(): Language {
+    const browserLang = navigator.language || (navigator as any).userLanguage;
+    const langCode = browserLang.toLowerCase().split('-')[0];
+    
+    // Verifica se o idioma do navegador é um dos suportados
+    if (langCode === 'pt' || langCode === 'en' || langCode === 'es') {
+      return langCode as Language;
+    }
+    
+    // Idioma padrão caso o idioma do navegador não seja suportado
+    return 'en';
   }
 
   private loadTranslations(): void {
