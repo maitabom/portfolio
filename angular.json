@@ -38,10 +38,16 @@
                 "glob": "**/*.json",
                 "input": "locales",
                 "output": "/locales"
+              },
+              {
+                "glob": "**/*.svg",
+                "input": "node_modules/flag-icons/flags",
+                "output": "/flags"
               }
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/flag-icons/css/flag-icons.min.css"
             ],
             "scripts": []
           },
