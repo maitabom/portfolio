@@ -1,0 +1,35 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "portfolio": "Portfolio",
+    "contact": "Contact"
+  },
+  "home": {
+    "greeting": "Hello, I am",
+    "role": "Full Stack Developer",
+    "description": "Developer passionate about creating innovative solutions and exceptional digital experiences.",
+    "cta": "View Projects",
+    "contact": "Get in Touch"
+  },
+  "about": {
+    "title": "About Me",
+    "experience": "Professional Experience",
+    "skills": "Skills",
+    "description": "Developer experienced in modern technologies, focused on creating scalable and performant web applications."
+  },
+  "portfolio": {
+    "title": "My Projects",
+    "viewProject": "View Project",
+    "technologies": "Technologies"
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send",
+    "social": "Social Media"
+  }
+}
+

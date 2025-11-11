@@ -1,0 +1,84 @@
+<section class="about">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">{{ t('about.title') }}</h2>
+      <div class="title-underline"></div>
+    </div>
+
+    <div class="about-content">
+      <div class="about-intro">
+        <p class="intro-text">{{ t('about.description') }}</p>
+      </div>
+
+      <!-- Experience Section -->
+      <div class="experience-section">
+        <h3 class="subsection-title">{{ t('about.experience') }}</h3>
+        <div class="timeline">
+          <div class="timeline-item" *ngFor="let exp of experiences">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h4 class="timeline-title">{{ exp.title }}</h4>
+                <span class="timeline-period">{{ exp.period }}</span>
+              </div>
+              <p class="timeline-company">{{ exp.company }}</p>
+              <p class="timeline-description">{{ exp.description }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Skills Section -->
+      <div class="skills-section">
+        <h3 class="subsection-title">{{ t('about.skills') }}</h3>
+        
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h4 class="category-title">Frontend</h4>
+            <div class="skills-list">
+              <div class="skill-item" *ngFor="let skill of getSkillsByCategory('Frontend')">
+                <div class="skill-info">
+                  <span class="skill-name">{{ skill.name }}</span>
+                  <span class="skill-percentage">{{ skill.level }}%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" [style.width.%]="skill.level"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h4 class="category-title">Backend</h4>
+            <div class="skills-list">
+              <div class="skill-item" *ngFor="let skill of getSkillsByCategory('Backend')">
+                <div class="skill-info">
+                  <span class="skill-name">{{ skill.name }}</span>
+                  <span class="skill-percentage">{{ skill.level }}%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" [style.width.%]="skill.level"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h4 class="category-title">Tools</h4>
+            <div class="skills-list">
+              <div class="skill-item" *ngFor="let skill of getSkillsByCategory('Tools')">
+                <div class="skill-info">
+                  <span class="skill-name">{{ skill.name }}</span>
+                  <span class="skill-percentage">{{ skill.level }}%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" [style.width.%]="skill.level"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

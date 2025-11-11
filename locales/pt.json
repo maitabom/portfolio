@@ -1,0 +1,35 @@
+{
+  "nav": {
+    "home": "Início",
+    "about": "Sobre",
+    "portfolio": "Portfólio",
+    "contact": "Contato"
+  },
+  "home": {
+    "greeting": "Olá, eu sou",
+    "role": "Desenvolvedor Full Stack",
+    "description": "Desenvolvedor apaixonado por criar soluções inovadoras e experiências digitais excepcionais.",
+    "cta": "Ver Projetos",
+    "contact": "Entre em Contato"
+  },
+  "about": {
+    "title": "Sobre Mim",
+    "experience": "Experiência Profissional",
+    "skills": "Habilidades",
+    "description": "Desenvolvedor com experiência em tecnologias modernas, focado em criar aplicações web escaláveis e performáticas."
+  },
+  "portfolio": {
+    "title": "Meus Projetos",
+    "viewProject": "Ver Projeto",
+    "technologies": "Tecnologias"
+  },
+  "contact": {
+    "title": "Entre em Contato",
+    "name": "Nome",
+    "email": "E-mail",
+    "message": "Mensagem",
+    "send": "Enviar",
+    "social": "Redes Sociais"
+  }
+}
+
