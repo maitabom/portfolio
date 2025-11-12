@@ -20,8 +20,10 @@ body.light-theme {
   --accent-rgba-07: rgba(255, 75, 16, 0.7);
   --accent-rgba-08: rgba(255, 75, 16, 0.8);
   --bg-primary: #ffffff;
+  --bg-primary-rgb: 255, 255, 255;
   --bg-secondary: #f5f5f5;
   --text-primary: #1a1a1a;
+  --text-primary-rgb: 26, 26, 26;
   --text-secondary: #666666;
   --shadow: rgba(0, 0, 0, 0.1);
 }
@@ -36,8 +38,10 @@ body.dark-theme {
   --accent-rgba-07: rgba(255, 171, 16, 0.7);
   --accent-rgba-08: rgba(255, 171, 16, 0.8);
   --bg-primary: #1a1a1a;
+  --bg-primary-rgb: 26, 26, 26;
   --bg-secondary: #2a2a2a;
   --text-primary: #ffffff;
+  --text-primary-rgb: 255, 255, 255;
   --text-secondary: #b3b3b3;
   --shadow: rgba(255, 255, 255, 0.1);
 }

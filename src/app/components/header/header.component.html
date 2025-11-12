@@ -18,6 +18,34 @@
         <a routerLink="/contact" routerLinkActive="active" (click)="closeMenu()">
           {{ t('nav.contact') }}
         </a>
+
+        <!-- Language Selector for Mobile -->
+        <div class="language-selector-mobile">
+          <button
+            class="lang-btn"
+            [class.active]="translationService.currentLang() === 'pt'"
+            (click)="changeLanguage('pt')"
+            title="Português"
+            aria-label="Português">
+            <span class="fi fi-br"></span>
+          </button>
+          <button
+            class="lang-btn"
+            [class.active]="translationService.currentLang() === 'en'"
+            (click)="changeLanguage('en')"
+            title="English"
+            aria-label="English">
+            <span class="fi fi-us"></span>
+          </button>
+          <button
+            class="lang-btn"
+            [class.active]="translationService.currentLang() === 'es'"
+            (click)="changeLanguage('es')"
+            title="Español"
+            aria-label="Español">
+            <span class="fi fi-es"></span>
+          </button>
+        </div>
       </nav>
 
       <div class="header-actions">
