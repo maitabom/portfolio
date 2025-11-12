@@ -12,6 +12,13 @@
 
 /* Light Theme */
 body.light-theme {
+  --accent-color: #FF4B10;
+  --accent-rgba-01: rgba(255, 75, 16, 0.1);
+  --accent-rgba-03: rgba(255, 75, 16, 0.3);
+  --accent-rgba-05: rgba(255, 75, 16, 0.5);
+  --accent-rgba-06: rgba(255, 75, 16, 0.6);
+  --accent-rgba-07: rgba(255, 75, 16, 0.7);
+  --accent-rgba-08: rgba(255, 75, 16, 0.8);
   --bg-primary: #ffffff;
   --bg-secondary: #f5f5f5;
   --text-primary: #1a1a1a;
@@ -21,6 +28,13 @@ body.light-theme {
 
 /* Dark Theme */
 body.dark-theme {
+  --accent-color: #FFAB10;
+  --accent-rgba-01: rgba(255, 171, 16, 0.1);
+  --accent-rgba-03: rgba(255, 171, 16, 0.3);
+  --accent-rgba-05: rgba(255, 171, 16, 0.5);
+  --accent-rgba-06: rgba(255, 171, 16, 0.6);
+  --accent-rgba-07: rgba(255, 171, 16, 0.7);
+  --accent-rgba-08: rgba(255, 171, 16, 0.8);
   --bg-primary: #1a1a1a;
   --bg-secondary: #2a2a2a;
   --text-primary: #ffffff;
@@ -52,7 +66,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 171, 16, 0.8);
+  background: var(--accent-rgba-08, rgba(255, 171, 16, 0.8));
 }
 
 /* Selection */

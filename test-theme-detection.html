@@ -34,12 +34,12 @@
 
         h1 {
             margin-bottom: 2rem;
-            color: #FFAB10;
+            color: #FF4B10;
         }
 
         .info-box {
-            background: rgba(255, 171, 16, 0.1);
-            border-left: 4px solid #FFAB10;
+            background: rgba(255, 75, 16, 0.1);
+            border-left: 4px solid #FF4B10;
             padding: 1rem;
             margin-bottom: 1rem;
             border-radius: 4px;
@@ -79,7 +79,7 @@
             padding: 0.75rem 1.5rem;
             border: none;
             border-radius: 8px;
-            background: #FFAB10;
+            background: #FF4B10;
             color: #000;
             font-weight: bold;
             cursor: pointer;
@@ -104,7 +104,7 @@
 
         .instructions h2 {
             margin-bottom: 1rem;
-            color: #FFAB10;
+            color: #FF4B10;
         }
 
         .instructions ol {
@@ -128,7 +128,7 @@
 <body>
     <div class="container">
         <h1>🎨 Teste de Detecção Automática de Tema</h1>
-        
+
         <div class="info-box">
             <strong>✅ Sistema Implementado:</strong> Este teste demonstra que o portfólio já possui detecção automática de tema funcionando!
         </div>
@@ -231,11 +231,11 @@
 
             document.getElementById('systemTheme').textContent = systemIsDark ? '🌙 Escuro' : '☀️ Claro';
             document.getElementById('currentTheme').textContent = currentIsDark ? '🌙 Escuro' : '☀️ Claro';
-            document.getElementById('savedTheme').textContent = savedTheme ? 
-                (savedTheme === 'dark' ? '🌙 Escuro (Salvo)' : '☀️ Claro (Salvo)') : 
+            document.getElementById('savedTheme').textContent = savedTheme ?
+                (savedTheme === 'dark' ? '🌙 Escuro (Salvo)' : '☀️ Claro (Salvo)') :
                 '❌ Nenhum (Usando tema do sistema)';
-            document.getElementById('autoSync').textContent = savedTheme ? 
-                '❌ Desativada (Usando preferência do usuário)' : 
+            document.getElementById('autoSync').textContent = savedTheme ?
+                '❌ Desativada (Usando preferência do usuário)' :
                 '✅ Ativa (Seguindo tema do sistema)';
         }
 
@@ -243,10 +243,10 @@
         function toggleTheme() {
             const isDark = document.body.classList.contains('dark-theme');
             const newTheme = isDark ? 'light' : 'dark';
-            
+
             localStorage.setItem(THEME_KEY, newTheme);
             applyTheme();
-            
+
             alert(`✅ Tema alterado para ${newTheme === 'dark' ? 'escuro' : 'claro'}!\n\n` +
                   `A preferência foi salva e será mantida mesmo se você mudar o tema do sistema.`);
         }
@@ -255,7 +255,7 @@
         function resetTheme() {
             localStorage.removeItem(THEME_KEY);
             applyTheme();
-            
+
             alert(`✅ Tema resetado!\n\n` +
                   `Agora o site está seguindo o tema do seu sistema (${mediaQueryList.matches ? 'escuro' : 'claro'}).\n\n` +
                   `Se você mudar o tema do sistema, o site mudará automaticamente.`);
