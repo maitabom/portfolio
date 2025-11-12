@@ -10,42 +10,6 @@
         <p class="intro-text">{{ t('about.description') }}</p>
       </div>
 
-      <!-- Experience Section -->
-      <div class="experience-section">
-        <h3 class="subsection-title">{{ t('about.experience') }}</h3>
-        <div class="timeline">
-          <div class="timeline-item" *ngFor="let exp of experiences">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <div class="timeline-header">
-                <h4 class="timeline-title">{{ exp.title }}</h4>
-                <span class="timeline-period">{{ exp.period }}</span>
-              </div>
-              <p class="timeline-company">{{ exp.company }}</p>
-              <p class="timeline-description">{{ exp.description }}</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Education Section -->
-      <div class="education-section">
-        <h3 class="subsection-title">{{ t('about.education') }}</h3>
-        <div class="timeline">
-          <div class="timeline-item" *ngFor="let edu of education">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <div class="timeline-header">
-                <h4 class="timeline-title">{{ edu.degree }}</h4>
-                <span class="timeline-period">{{ edu.period }}</span>
-              </div>
-              <p class="timeline-company">{{ edu.institution }}</p>
-              <p class="timeline-description">{{ edu.description }}</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
       <!-- Skills Section -->
       <div class="skills-section">
         <h3 class="subsection-title">{{ t('about.skills') }}</h3>
@@ -93,6 +57,42 @@
                   <div class="skill-progress" [style.width.%]="skill.level"></div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Experience Section -->
+      <div class="experience-section">
+        <h3 class="subsection-title">{{ t('about.experience') }}</h3>
+        <div class="timeline">
+          <div class="timeline-item" *ngFor="let exp of experiences">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h4 class="timeline-title">{{ exp.title }}</h4>
+                <span class="timeline-period">{{ exp.period }}</span>
+              </div>
+              <p class="timeline-company">{{ exp.company }}</p>
+              <p class="timeline-description">{{ exp.description }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Education Section -->
+      <div class="education-section">
+        <h3 class="subsection-title">{{ t('about.education') }}</h3>
+        <div class="timeline">
+          <div class="timeline-item" *ngFor="let edu of education">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h4 class="timeline-title">{{ edu.degree }}</h4>
+                <span class="timeline-period">{{ edu.period }}</span>
+              </div>
+              <p class="timeline-company">{{ edu.institution }}</p>
+              <p class="timeline-description">{{ edu.description }}</p>
             </div>
           </div>
         </div>
