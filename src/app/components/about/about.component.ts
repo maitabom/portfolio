@@ -15,6 +15,13 @@ interface Experience {
   description: string;
 }
 
+interface Education {
+  degree: string;
+  institution: string;
+  period: string;
+  description: string;
+}
+
 @Component({
   selector: 'app-about',
   imports: [CommonModule],
@@ -55,6 +62,21 @@ export class AboutComponent {
       company: 'Agência Digital',
       period: '2017 - 2019',
       description: 'Desenvolvimento de websites e aplicações web para diversos clientes. Trabalho com múltiplas tecnologias e frameworks.'
+    }
+  ];
+
+  education: Education[] = [
+    {
+      degree: 'Bacharelado em Ciência da Computação',
+      institution: 'Universidade Federal',
+      period: '2013 - 2017',
+      description: 'Formação sólida em fundamentos de programação, estruturas de dados, algoritmos e engenharia de software.'
+    },
+    {
+      degree: 'Pós-Graduação em Desenvolvimento Web',
+      institution: 'Instituto de Tecnologia',
+      period: '2018 - 2019',
+      description: 'Especialização em tecnologias web modernas, arquitetura de software e boas práticas de desenvolvimento.'
     }
   ];
 

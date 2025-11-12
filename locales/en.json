@@ -22,6 +22,7 @@
   "about": {
     "title": "About Me",
     "experience": "Professional Experience",
+    "education": "Academic Background",
     "skills": "Skills",
     "description": "Developer experienced in modern technologies, focused on creating scalable and performant web applications."
   },

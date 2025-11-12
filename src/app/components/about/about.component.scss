@@ -40,7 +40,8 @@
     }
   }
 
-  .experience-section {
+  .experience-section,
+  .education-section {
     margin-bottom: 4rem;
 
     .subsection-title {
@@ -262,6 +263,7 @@
     }
 
     .experience-section,
+    .education-section,
     .skills-section {
       .subsection-title {
         font-size: 1.5rem;
