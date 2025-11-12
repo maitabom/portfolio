@@ -78,7 +78,11 @@
         </div>
 
         <!-- Theme Toggle -->
-        <button class="theme-toggle" (click)="toggleTheme()" [attr.aria-label]="themeService.isDarkMode() ? 'Ativar modo claro' : 'Ativar modo escuro'">
+        <button 
+          class="theme-toggle" 
+          (click)="toggleTheme()" 
+          [attr.aria-label]="themeService.isDarkMode() ? t('theme.switchToLight') : t('theme.switchToDark')"
+          [attr.title]="themeService.isDarkMode() ? t('theme.switchToLight') : t('theme.switchToDark')">
           <svg *ngIf="!themeService.isDarkMode()" class="icon sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <circle cx="12" cy="12" r="5"></circle>
             <line x1="12" y1="1" x2="12" y2="3"></line>
@@ -96,7 +100,13 @@
         </button>
 
         <!-- GitHub Code Button -->
-        <a href="https://github.com/maitabom/portfolio" target="_blank" rel="noopener noreferrer" class="code-toggle" aria-label="Ver código no GitHub">
+        <a 
+          href="https://github.com/maitabom/portfolio" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="code-toggle" 
+          [attr.aria-label]="t('code.viewSource')"
+          [attr.title]="t('code.viewSource')">
           <svg class="icon code" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <polyline points="16 18 22 12 16 6"></polyline>
             <polyline points="8 6 2 12 8 18"></polyline>

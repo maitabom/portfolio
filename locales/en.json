@@ -5,6 +5,13 @@
     "portfolio": "Portfolio",
     "contact": "Contact"
   },
+  "theme": {
+    "switchToLight": "Click to switch to light mode",
+    "switchToDark": "Click to switch to dark mode"
+  },
+  "code": {
+    "viewSource": "View the source code of this page"
+  },
   "home": {
     "greeting": "Hello, I am",
     "role": "Full Stack Developer",

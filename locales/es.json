@@ -5,6 +5,13 @@
     "portfolio": "Portafolio",
     "contact": "Contacto"
   },
+  "theme": {
+    "switchToLight": "Clic para cambiar a modo claro",
+    "switchToDark": "Clic para cambiar a modo oscuro"
+  },
+  "code": {
+    "viewSource": "Ver el código fuente de esta página"
+  },
   "home": {
     "greeting": "Hola, soy",
     "role": "Desarrollador Full Stack",
