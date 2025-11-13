@@ -153,6 +153,118 @@
     }
   }
 
+  .resume-section {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+
+    .resume-dropdown-wrapper {
+      position: relative;
+      display: inline-block;
+
+      .resume-btn {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 1rem 2rem;
+        background: var(--accent-color);
+        color: white;
+        border: none;
+        border-radius: 12px;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px var(--accent-rgba-03);
+        min-width: 220px;
+
+        &:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 6px 25px var(--accent-rgba-04);
+          background: var(--accent-hover);
+        }
+
+        &:active {
+          transform: translateY(-1px);
+        }
+
+        &.active {
+          border-radius: 12px 12px 0 0;
+        }
+
+        .resume-icon {
+          width: 20px;
+          height: 20px;
+          stroke-width: 2.5;
+        }
+
+        .resume-btn-text {
+          font-size: 1rem;
+          flex: 1;
+        }
+
+        .chevron-icon {
+          width: 18px;
+          height: 18px;
+          stroke-width: 2.5;
+          transition: transform 0.3s ease;
+
+          &.open {
+            transform: rotate(180deg);
+          }
+        }
+      }
+
+      .resume-dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--bg-secondary);
+        border-radius: 0 0 12px 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        max-height: 0;
+        opacity: 0;
+        transition: all 0.3s ease;
+        z-index: 10;
+
+        &.show {
+          max-height: 200px;
+          opacity: 1;
+        }
+
+        .dropdown-item {
+          width: 100%;
+          padding: 0.875rem 1.5rem;
+          background: var(--bg-secondary);
+          color: var(--text-primary);
+          border: none;
+          text-align: left;
+          font-size: 0.95rem;
+          font-weight: 500;
+          cursor: pointer;
+          transition: all 0.2s ease;
+          border-bottom: 1px solid var(--bg-primary);
+
+          &:last-child {
+            border-bottom: none;
+          }
+
+          &:hover {
+            background: var(--accent-rgba-01);
+            color: var(--accent-color);
+            padding-left: 2rem;
+          }
+
+          &:active {
+            background: var(--accent-rgba-03);
+          }
+        }
+      }
+    }
+  }
+
   .skills-section {
     margin-bottom: 5rem;
 
@@ -289,6 +401,20 @@
 
     .skills-grid {
       grid-template-columns: 1fr;
+    }
+
+    .resume-section {
+      margin-top: 3rem;
+
+      .resume-dropdown-wrapper {
+        width: 100%;
+        max-width: 300px;
+
+        .resume-btn {
+          width: 100%;
+          padding: 0.875rem 1.5rem;
+        }
+      }
     }
   }
 }

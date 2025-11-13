@@ -24,7 +24,12 @@
     "experience": "Experiencia Profesional",
     "education": "Formación Académica",
     "skills": "Habilidades",
-    "description": "Desarrollador con experiencia en tecnologías modernas, enfocado en crear aplicaciones web escalables y de alto rendimiento."
+    "description": "Desarrollador con experiencia en tecnologías modernas, enfocado en crear aplicaciones web escalables y de alto rendimiento.",
+    "downloadResume": "Descargar Currículum",
+    "resumeLanguages": "Elige el idioma:",
+    "portuguese": "Portugués",
+    "english": "Inglés",
+    "spanish": "Español"
   },
   "portfolio": {
     "title": "Mis Proyectos",

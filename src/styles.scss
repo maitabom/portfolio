@@ -13,8 +13,10 @@
 /* Light Theme */
 body.light-theme {
   --accent-color: #FF4B10;
+  --accent-hover: #E63D00;
   --accent-rgba-01: rgba(255, 75, 16, 0.1);
   --accent-rgba-03: rgba(255, 75, 16, 0.3);
+  --accent-rgba-04: rgba(255, 75, 16, 0.4);
   --accent-rgba-05: rgba(255, 75, 16, 0.5);
   --accent-rgba-06: rgba(255, 75, 16, 0.6);
   --accent-rgba-07: rgba(255, 75, 16, 0.7);
@@ -31,8 +33,10 @@ body.light-theme {
 /* Dark Theme */
 body.dark-theme {
   --accent-color: #FFAB10;
+  --accent-hover: #FFB933;
   --accent-rgba-01: rgba(255, 171, 16, 0.1);
   --accent-rgba-03: rgba(255, 171, 16, 0.3);
+  --accent-rgba-04: rgba(255, 171, 16, 0.4);
   --accent-rgba-05: rgba(255, 171, 16, 0.5);
   --accent-rgba-06: rgba(255, 171, 16, 0.6);
   --accent-rgba-07: rgba(255, 171, 16, 0.7);

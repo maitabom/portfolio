@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslationService } from '../../services/translation.service';
 
@@ -30,6 +30,7 @@ interface Education {
 })
 export class AboutComponent {
   translationService = inject(TranslationService);
+  isDropdownOpen = false;
 
   skills: Skill[] = [
     { name: 'Angular', level: 90, category: 'Frontend' },
@@ -86,5 +87,48 @@ export class AboutComponent {
 
   getSkillsByCategory(category: string): Skill[] {
     return this.skills.filter(skill => skill.category === category);
+  }
+
+  @HostListener('document:click', ['$event'])
+  onDocumentClick(event: MouseEvent): void {
+    const target = event.target as HTMLElement;
+    const clickedInside = target.closest('.resume-dropdown-wrapper');
+    
+    if (!clickedInside && this.isDropdownOpen) {
+      this.isDropdownOpen = false;
+    }
+  }
+
+  toggleDropdown(): void {
+    this.isDropdownOpen = !this.isDropdownOpen;
+  }
+
+  downloadResume(language: string): void {
+    // Close dropdown after selection
+    this.isDropdownOpen = false;
+
+    // Map language codes to file names
+    const resumeFiles: { [key: string]: string } = {
+      'pt': 'curriculo-pt.pdf',
+      'en': 'resume-en.pdf',
+      'es': 'curriculum-es.pdf'
+    };
+
+    const fileName = resumeFiles[language];
+    if (!fileName) {
+      console.error('Invalid language code');
+      return;
+    }
+
+    // Create a link element and trigger download
+    const link = document.createElement('a');
+    link.href = `/resumes/${fileName}`;
+    link.download = fileName;
+    link.target = '_blank';
+    
+    // Append to body, click, and remove
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   }
 }

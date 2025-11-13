@@ -24,7 +24,12 @@
     "experience": "Professional Experience",
     "education": "Academic Background",
     "skills": "Skills",
-    "description": "Developer experienced in modern technologies, focused on creating scalable and performant web applications."
+    "description": "Developer experienced in modern technologies, focused on creating scalable and performant web applications.",
+    "downloadResume": "Download Resume",
+    "resumeLanguages": "Choose language:",
+    "portuguese": "Portuguese",
+    "english": "English",
+    "spanish": "Spanish"
   },
   "portfolio": {
     "title": "My Projects",
