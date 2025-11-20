@@ -190,6 +190,87 @@
         opacity: 0.2;
         z-index: -1;
       }
+
+      // Círculos de bolha animados
+      .bubble-circle {
+        position: absolute;
+        background: var(--accent-color);
+        border-radius: 50%;
+        z-index: 0;
+        pointer-events: none;
+      }
+
+      .bubble-1 {
+        width: 120px;
+        height: 120px;
+        top: -30%;
+        left: -35%;
+        opacity: 0.15;
+        animation: floatBubble1 6s ease-in-out infinite;
+      }
+
+      .bubble-2 {
+        width: 80px;
+        height: 80px;
+        top: -20%;
+        right: -30%;
+        opacity: 0.25;
+        animation: floatBubble2 7s ease-in-out infinite;
+      }
+
+      .bubble-3 {
+        width: 60px;
+        height: 60px;
+        bottom: -30%;
+        left: -20%;
+        opacity: 0.2;
+        animation: floatBubble3 5s ease-in-out infinite;
+      }
+
+      .bubble-4 {
+        width: 100px;
+        height: 100px;
+        bottom: -28%;
+        right: -35%;
+        opacity: 0.18;
+        animation: floatBubble4 8s ease-in-out infinite;
+      }
+
+      .bubble-5 {
+        width: 70px;
+        height: 70px;
+        top: 48%;
+        left: -40%;
+        opacity: 0.22;
+        animation: floatBubble5 6.5s ease-in-out infinite;
+      }
+
+      .bubble-6 {
+        width: 90px;
+        height: 90px;
+        top: 40%;
+        right: -40%;
+        opacity: 0.16;
+        animation: floatBubble6 7.5s ease-in-out infinite;
+      }
+
+      .bubble-7 {
+        width: 50px;
+        height: 50px;
+        top: -8%;
+        left: 110%;
+        opacity: 0.28;
+        animation: floatBubble7 5.5s ease-in-out infinite;
+      }
+
+      .bubble-8 {
+        width: 110px;
+        height: 110px;
+        bottom: -18%;
+        left: 105%;
+        opacity: 0.14;
+        animation: floatBubble8 9s ease-in-out infinite;
+      }
     }
   }
 
@@ -315,3 +396,98 @@
   }
 }
 
+@keyframes floatBubble1 {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  33% {
+    transform: translate(15px, -20px);
+  }
+  66% {
+    transform: translate(-10px, -15px);
+  }
+}
+
+@keyframes floatBubble2 {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  33% {
+    transform: translate(-20px, 15px);
+  }
+  66% {
+    transform: translate(-15px, -10px);
+  }
+}
+
+@keyframes floatBubble3 {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  33% {
+    transform: translate(10px, 20px);
+  }
+  66% {
+    transform: translate(20px, 10px);
+  }
+}
+
+@keyframes floatBubble4 {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  33% {
+    transform: translate(-15px, -25px);
+  }
+  66% {
+    transform: translate(10px, -15px);
+  }
+}
+
+@keyframes floatBubble5 {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  33% {
+    transform: translate(18px, 12px);
+  }
+  66% {
+    transform: translate(-12px, 18px);
+  }
+}
+
+@keyframes floatBubble6 {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  33% {
+    transform: translate(-18px, -15px);
+  }
+  66% {
+    transform: translate(-10px, 12px);
+  }
+}
+
+@keyframes floatBubble7 {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  33% {
+    transform: translate(12px, -18px);
+  }
+  66% {
+    transform: translate(-15px, -10px);
+  }
+}
+
+@keyframes floatBubble8 {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  33% {
+    transform: translate(-20px, 18px);
+  }
+  66% {
+    transform: translate(15px, -12px);
+  }
+}
